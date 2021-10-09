@@ -1,0 +1,5 @@
+package com.bancodigitalproject.digitalbank.model;
+
+public class ContaPoupanca extends Conta{
+
+}

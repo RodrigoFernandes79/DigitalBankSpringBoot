@@ -1,0 +1,5 @@
+package com.bancodigitalproject.digitalbank.service;
+
+public class ContaService {
+
+}

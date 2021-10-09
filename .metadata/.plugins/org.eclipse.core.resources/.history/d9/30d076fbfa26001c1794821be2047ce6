@@ -1,0 +1,28 @@
+package com.bancodigitalproject.digitalbank.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.bancodigitalproject.digitalbank.model.Cliente;
+import com.bancodigitalproject.digitalbank.repository.ClienteRepository;
+import com.bancodigitalproject.digitalbank.service.ClienteService;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+@RequestMapping("/listcliente") //localhost:8095/listcliente
+public class ClienteController {
+	@Autowired
+	private ClienteService clienteService;
+	private ClienteRepository clienteRepository;
+
+	//Creating Cliente:
+	public ResponseEntity<Cliente> createCLiente(@RequestBody Cliente cliente){
+		return ResponseEntity.ok(clienteRepository.save(cliente));
+		
+	}
+}

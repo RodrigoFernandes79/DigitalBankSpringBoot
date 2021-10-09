@@ -1,0 +1,28 @@
+package com.bancodigitalproject.digitalbank.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity(name="conta")
+public class Conta {
+	
+	
+	private String agencia;
+	@Id
+	@Column(unique=true)
+	private String numero;
+	
+	private Double saldo;
+	
+	private Cliente cliente;
+	
+
+}

@@ -1,0 +1,11 @@
+package com.bancodigitalproject.digitalbank.model;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Data
+@Entity(name="conta")
+public class Conta {
+
+}
